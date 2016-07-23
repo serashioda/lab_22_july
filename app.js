@@ -120,9 +120,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
-}
+function multiplyArray(testArray){   //eslint-disable-line
+    var ultraPly = multiply((multiply(testArray[0], testArray[1])[0]),testArray[2])[0];
+    var message = 'The numbers ' + testArray + ' have a product of ' + ultraPly + '.';
+    console.log(message + 'is the actual output.');
+    return [ultraPly, message];
+  }
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
